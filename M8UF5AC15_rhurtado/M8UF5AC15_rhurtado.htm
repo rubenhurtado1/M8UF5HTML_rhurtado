@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari d'enviament</title>
+    <script type="text/javascript">
+        function validar(){
+            var psswd=document.getElementById("passwd").value;
+            var confpsswd=document.getElementById("confpasswd").value;
+            if(psswd=confpsswd){
+            return true;
+        }
+        else{
+
+            alert("No coincideix");
+            return false;
+        }
+    }
+    </script>
+</head>
+<body>
+    <table style="background-color: #EFEFEF;">
+        <tr>
+            <td width="1000px" style="background-color: #306090; font-family: Verdana, Geneva, Tahoma, sans-serif; color: white;" colspan="2"><h2>Enviar missatge <img src="img/gb_reload_s.gif" alt="tornar" width="50px" align="right"></h2></td>
+        </tr>
+        <form action="mailto:ruben.hurtado@inslapineda.cat" method="get" onsubmit="return validar();">
+        <tr>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif;" align="right" width="210px">
+                <strong>Usuari: </strong>
+            </td>
+            <td>
+                <input type="text" name="_usuari" maxlength="8" required>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif" align="right">
+                <strong>Contrasenya: </strong>
+            </td>
+            <td>
+                <input type="password" name="_contrasenya" id="psswd" required>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif" align="right">
+                <strong>Validar contrasenya: </strong>
+            </td>
+            <td>
+                <input type="password" name="_confcontrasenya" id="confpsswd" required>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif" align="right">
+                <strong>Nom: </strong>
+            </td>
+            <td>
+                <input type="text" name="_nom" required>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif" align="right">
+                <strong>E-mail: </strong>
+            </td>
+            <td>
+                <input type="email" name="_email" required>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right; vertical-align: top;"><strong>Quins jocs t'interessen:</strong></td>
+            <td>
+            <input type="checkbox" id="cbox1"> Tetris <br>
+            <input type="checkbox" id="cbox1"> Damas <br>
+            <input type="checkbox" id="cbox1"> Ajedrez <br>
+            <input type="checkbox" id="cbox1"> Ahorcado <br>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif" align="right">
+                <strong>Arxiu: </strong>
+            </td>
+            <td>
+                <input type="file" name="_arxiu">
+            </td>
+        </tr>
+        <tr>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif" align="right">
+                <strong>Imatge: </strong>
+            </td>
+            <td>
+                <input type="file" name="_imatge">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif">El tamany de l'arxiu i la imatge no pot excedir els 4Kbytes</td>
+        </tr>
+        <tr>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;" colspan="2"><strong>Requereixo resposta:</strong>
+                <input type="radio" name="resposta" value="si">Sí
+                <input type="radio" name="resposta" value="no">No
+            </td>
+        </tr>
+        <tr>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;" colspan="2"><strong>Missatge:</strong></td>
+        </tr>
+        <tr>
+             <td colspan="2">
+                <div align="center">
+                <textarea name="descripcio" id="" cols="45" rows="5">
+                </textarea>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div align="center">
+                    <input type="submit" name="enviar" id="" value="Enviar">
+                    <input type="reset" name="borrar" id="" value="Borrar">
+                </div>
+            </td>
+        </tr>
+        </form>
+    </table>
+</body>
+</html>
